@@ -11,5 +11,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
+      - name: Force xcode 11 
+        run: sudo xcode-select -switch /Applications/Xcode_11.5.app
       - name: Build and test
         run: exec ./.github/scripts/test_app.sh
