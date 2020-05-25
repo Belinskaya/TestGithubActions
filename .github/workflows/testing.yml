@@ -1,10 +1,15 @@
+name: CI
+# This workflow is triggered on pushes to the repository.
 on: pull_request
+
 jobs:
-test:
-  name: Testing iOS app
-  runs-on: macOS-latest
-  steps:
-    - name: Checkout repository
-    uses: actions/checkout@v1
-    - name: Testing iOS app
-    run: exec ./.github/scripts/test_app.sh
+  test:
+    # Job name is Test
+    name: Test
+    # This job runs on macOS
+    runs-on: macOS-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Build and test
+        run: exec ./.github/scripts/test_app.sh
