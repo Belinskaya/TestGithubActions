@@ -1,7 +1,7 @@
 on: pull_request
 jobs:
-	test:
-		name: Testing iOS app
+test:
+  name: Testing iOS app
     runs-on: macOS-latest
     steps:
       - name: Checkout repository
