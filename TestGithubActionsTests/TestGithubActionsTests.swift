@@ -15,5 +15,9 @@ class TestGithubActionsTests: XCTestCase {
         let success = true
         XCTAssertTrue(success, "Success should be true in this test")
     }
+    
+    func testFailure() {
+        XCTAssertTrue(3 == 2, "Oops, it was intended")
+    }
 
 }
